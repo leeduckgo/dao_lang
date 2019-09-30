@@ -15,9 +15,13 @@ use Mix.Config
 # which you typically run after static files are built.
 config :dao, DaoWeb.Endpoint,
   load_from_system_env: true,
-  url: [host: "example.com", port: 80],
-  cache_static_manifest: "priv/static/cache_manifest.json"
-
+  url: [host: "example.com", port: 4000],
+  # cache_static_manifest: "priv/static/cache_manifest.json"
+  debug_errors: true,
+  code_reloader: true,
+  check_origin: false,
+  watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin",
+                    cd: Path.expand("../assets", __DIR__)]]
 # Do not print debug messages in production
 config :logger, level: :info
 
