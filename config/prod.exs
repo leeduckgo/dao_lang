@@ -18,7 +18,6 @@ config :dao, DaoWeb.Endpoint,
   url: [host: "example.com", port: 4000],
   # cache_static_manifest: "priv/static/cache_manifest.json"
   debug_errors: true,
-  code_reloader: true,
   check_origin: false,
   watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin",
                     cd: Path.expand("../assets", __DIR__)]]
