@@ -15,7 +15,10 @@ config :dao, DaoWeb.Endpoint,
   secret_key_base: "4YMxS1g6Us4iov4kQT0xPrHyiQStSczSIJipNcVAhRb/Tg6TnzWZ6187qxCqUKCj",
   render_errors: [view: DaoWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Dao.PubSub,
-           adapter: Phoenix.PubSub.PG2]
+           adapter: Phoenix.PubSub.PG2],
+   live_view: [
+     signing_salt: "6HlkIUvD"
+   ]
 
 # Configures Elixir's Logger
 config :logger, :console,

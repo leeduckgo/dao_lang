@@ -23,6 +23,7 @@ defmodule DaoWeb do
       import Plug.Conn
       import DaoWeb.Router.Helpers
       import DaoWeb.Gettext
+      import Phoenix.LiveView.Controller, only: [live_render: 3]
     end
   end
 
@@ -40,6 +41,8 @@ defmodule DaoWeb do
       import DaoWeb.Router.Helpers
       import DaoWeb.ErrorHelpers
       import DaoWeb.Gettext
+
+      import Phoenix.LiveView, only: [live_render: 2, live_render: 3]
     end
   end
 
@@ -48,6 +51,7 @@ defmodule DaoWeb do
       use Phoenix.Router
       import Plug.Conn
       import Phoenix.Controller
+      import Phoenix.LiveView.Router
     end
   end
 
